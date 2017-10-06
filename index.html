@@ -53,18 +53,119 @@
  <a-assets>
      
     <a-asset-item id="trash" src="https://rawgit.com/Lia021/Sloan-talk-show/master/trash/trash.dae"></a-asset-item>
-  
+    <a-asset-item id="brick" src="https://rawgit.com/Lia021/Sloan-talk-show/master/brickwall/brickwall.dae"></a-asset-item>
+    
      
      
      
  </a-assets>
 
-    <!--box-->
-
-    <a-box color='black' opacity="0.90" scale="70 70 70"side="double" position="0 0 0"></a-box>
-    
+   <!--sky-->
+      
+  <a-sky radius="300" color="black"></a-sky>
+ 
   
-    <!--punkin-->
+    <!--trash-->
      
-    <a-entity position="0 0 0" scale="3 3 3" rotation="0 0 0" collada-model="#trash"n-mesh-collider="type: environment; convex: false"></a-entity>
+    <a-entity position="-1.40 0 -0.50" scale="10 10 10" rotation="0 0 0" collada-model="#trash"n-mesh-collider="type: environment; convex: false"></a-entity>
     
+   <!--trash2-->
+     
+   <a-entity position="1.20 0 -0.50" scale="10 10 10" rotation="0 0 0" collada-model="#trash"n-mesh-collider="type: environment; convex: false"></a-entity>
+  
+
+   <!--brick-->
+     
+   <a-entity position="0.10 0 -1.70" scale="10 10 20" rotation="0 90 0" collada-model="#brick"n-mesh-collider="type: environment; convex: false"></a-entity>
+   
+  <!--brick2-->
+     
+  <a-entity position="-4 0 -0.40" scale="10 10 10" rotation="0 150 0" collada-model="#brick"n-mesh-collider="type: environment; convex: false"></a-entity>
+  
+  <!--brick3-->
+     
+  <a-entity position="4 0 -0.40" scale="10 10 10" rotation="0 30 0" collada-model="#brick"n-mesh-collider="type: environment; convex: false"></a-entity>
+ 
+
+   <!-- Basic cylinder. -->
+
+   <a-cylinder position="0 -0.24 0"opacity="1"src="https://i.imgur.com/Lrcag7f.jpg" height="0.50" radius="3.90"></a-cylinder>
+
+   <!--fire-->
+
+   <a-entity n-object='res: effects/fire'position="-1.60 1.40 -0.20"></a-entity>
+
+    <!--fire2-->
+
+   <a-entity n-object='res: effects/fire'position="-1 1.40 -0.20"></a-entity>
+
+   <!--fire3-->
+  
+   <a-entity n-object='res: effects/fire'position="-0.50 1.40 -0.20"></a-entity>
+
+    <!--fire4-->
+   
+    <a-entity n-object='res: effects/fire'position="-1.60 1.40 -0.50"></a-entity>
+
+    <!--fire5-->
+   
+    <a-entity n-object='res: effects/fire'position="-1 1.40 -0.50"></a-entity>
+
+    <!--fire6-->
+   
+    <a-entity n-object='res: effects/fire'position="-0.50 1.40 -0.50"></a-entity>
+
+    <!--smoke-->
+   
+    <a-entity n-object='res: effects/steam'position="-1.60 1.40 -0.50"></a-entity>
+
+    <!--smoke2-->
+   
+    <a-entity n-object='res: effects/steam'position="-1 -0.40 -0.50"></a-entity>
+
+    <!--smoke3-->
+   
+    <a-entity n-object='res: effects/steam'position="-0.50 -0.40 -0.50"></a-entity>
+
+    <!--smoke4-->
+   
+    <a-entity n-object='res: effects/steam'position="1.20 -0.40 -0.50"></a-entity>
+
+    <!--smoke5-->
+   
+    <a-entity n-object='res: effects/steam'position="1.70 -0.40 -0.50"></a-entity>
+
+    <!--smoke6-->
+   
+    <a-entity n-object='res: effects/steam'position="2 -0.40 -0.50"></a-entity>
+      
+
+    <!--fire7-->
+
+   <a-entity n-object='res: effects/fire'position="1 1.40 -0.20"></a-entity>
+
+   <!--fire8-->
+
+  <a-entity n-object='res: effects/fire'position="1.55 1.40 -0.20"></a-entity>
+
+
+  <!--fire9-->
+
+  <a-entity n-object='res: effects/fire'position="2.10 1.40 -0.20"></a-entity>
+
+  <!--fire10-->
+
+  <a-entity n-object='res: effects/fire'position="1 1.40 -0.50"></a-entity>
+    
+  <!--fire11-->
+
+  <a-entity n-object='res: effects/fire'position="1.55 1.40 -0.50"></a-entity>
+   
+    
+  <!--fire12-->
+
+ <a-entity n-object='res: effects/fire'position="2.10 1.40 -0.50"></a-entity>
+   
+  
+
+  
