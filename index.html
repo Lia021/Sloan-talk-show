@@ -54,6 +54,7 @@
      
     <a-asset-item id="trash" src="https://rawgit.com/Lia021/Sloan-talk-show/master/trash/trash.dae"></a-asset-item>
     <a-asset-item id="brick" src="https://rawgit.com/Lia021/Sloan-talk-show/master/brickwall/brickwall.dae"></a-asset-item>
+    <a-asset-item id="bleacher" src="https://rawgit.com/Lia021/Sloan-talk-show/master/sloan/bleachers.dae"></a-asset-item>
     
      
      
@@ -61,7 +62,9 @@
  </a-assets>
 
   
- 
+     <!--sky-->
+      
+     <a-sky radius="100" color="black"></a-sky>
   
     <!--trash-->
      
@@ -120,3 +123,16 @@
      
    <a-image position="0.02 0.60 0.64" src="https://rawgit.com/Lia021/Sloan-talk-show/master/sloan.jpg" opacity="1" altspace-cursor-collider="enabled: false" rotation="0 0 0" width="2.10" height="1.05">
    </a-image>
+
+   <!--poster-->
+     
+   <a-image position="-2.30 2 -1.43" src="https://rawgit.com/Lia021/Sloan-talk-show/master/camilla%20dee.jpg" opacity="1" altspace-cursor-collider="enabled: false" rotation="0 0 0" width="0.80" height="1">
+   </a-image>
+
+    <!--bleacher-->
+     
+   <a-entity position="0 0 15" scale="18 18 18" rotation="0 90 0" collada-model="#bleacher"n-mesh-collider="type: environment; convex: false"></a-entity>
+ 
+   <!--inclser-->
+
+   <a-entity position="2 2 7.55" rotation="0 -10 0" scale="3 3.62 3" n-layout-browser="url:  https://video-jukebox.firebaseapp.com/"></a-entity>
