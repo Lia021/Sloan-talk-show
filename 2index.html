@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+  <script src="https://sdk.altvr.com/libs/altspace.js/2.6.0/altspace.min.js"></script>
+  <script>
+    // n-skeleton-parent only works with root meshes at the moment. Since most model loaders use a root
+    // container object, we need to collapse the model so that n-skeleton-parent can access the mesh directly.
+    AFRAME.registerComponent('collapse-model', {
+        init: function () {
+            this.el.addEventListener('model-loaded', function () {
+                this.el.object3DMap.mesh.updateMatrixWorld();
+                var mesh;
+                this.el.object3DMap.mesh.traverse(function (obj) {
+                    if (!mesh && obj instanceof THREE.Mesh) {
+                        mesh = obj;
+                    }
+                }.bind(this))
+                if (mesh) {
+                    this.el.sceneEl.object3D.updateMatrixWorld(true);
+                    mesh.scale.copy(mesh.getWorldScale());
+                    this.el.setObject3D('mesh', mesh);
+                    // setObject3D emits this event in a-frame 0.4.0
+                    this.el.emit('object3dset', {
+                        type: 'mesh'
+                    });
+                }
+            }.bind(this));
+        }
+    });
+  </script>
+  <script>
+    altspace.getThreeJSTrackingSkeleton().then(function (skeleton) {
+          window.head = skeleton.getJoint('Head');
+        });
+        AFRAME.registerComponent('altspace-look-at', {
+          init: function () {
+            if (!window.altspace || !altspace.inClient) { return; }
+          },
+          tick: function () {
+            if (!window.head || !this.el.object3D) { return; }
+            this.el.object3D.lookAt(window.head.position); 
+          }
+        })
+  </script>
+
+  <body>
+    <a-scene altspace=fullspace:true sync-system="author: bookgirl; app: sloan">
+        
+ <a-assets>
+     
+    <a-asset-item id="trash" src="https://rawgit.com/Lia021/Sloan-talk-show/master/trash/trash.dae"></a-asset-item>
+    <a-asset-item id="brick" src="https://rawgit.com/Lia021/Sloan-talk-show/master/brickwall/brickwall.dae"></a-asset-item>
+    <a-asset-item id="bleacher" src="https://rawgit.com/Lia021/Sloan-talk-show/master/sloan/bleachers.dae"></a-asset-item>
+    
+     
+     
+     
+ </a-assets>
+
+  
+     <!--sky-->
+      
+     <a-sky radius="100" color="black"></a-sky>
+  
+    <!--trash-->
+     
+    <a-entity position="-0.30 0 -0.10" scale="10 10 10" rotation="0 0 0" collada-model="#trash"n-mesh-collider="type: environment; convex: false"></a-entity>
+    
+   <!--brick-->
+     
+   <a-entity position="0.05 0 -1.50" scale="10 10 25" rotation="0 90 0" collada-model="#brick"n-mesh-collider="type: environment; convex: false"></a-entity>
+   
+   <!-- Basic cylinder. -->
+
+   <a-cylinder position="0 -0.24 0"opacity="1"color="#36383a" height="0.50" radius="3.90"></a-cylinder>
+
+   <!--fire-->
+
+   <a-entity n-object='res: effects/fire'position="-0.50 1.40 0.30"></a-entity>
+
+   <!--fire2-->
+
+  <a-entity n-object='res: effects/fire'position="0.05 1.40 0.30"></a-entity>
+
+  <!--fire3-->
+
+  <a-entity n-object='res: effects/fire'position="0.50 1.40 0.30"></a-entity>
+
+  <!--fire4-->
+
+  <a-entity n-object='res: effects/fire'position="0.50 1.40 -0.05"></a-entity>
+
+  <!--fire5-->
+  
+  <a-entity n-object='res: effects/fire'position="0.05 1.40 -0.05"></a-entity>
+
+  <!--fire6-->
+
+  <a-entity n-object='res: effects/fire'position="-0.50 1.40 -0.05"></a-entity>
+
+  <!--smoke-->
+
+  <a-entity n-object='res: effects/steam'position="-0.50 -0.40 -0.05"></a-entity>
+
+  <!--smoke2-->
+
+  <a-entity n-object='res: effects/steam'position="0.05 -0.40 -0.05"></a-entity>
+
+  <!--smoke3-->
+
+  <a-entity n-object='res: effects/steam'position="0.50 -0.40 -0.05"></a-entity>
+
+
+  <!--sphere-->
+
+<a-sphere position="0 20 -5"opacity="0.3"color="black" n-sphere-collider="type: environment; radius: 2"radius="2"></a-sphere>
+
+   <!--sign-->
+     
+   <a-image position="0.02 0.60 0.64" src="https://rawgit.com/Lia021/Sloan-talk-show/master/sloan.jpg" opacity="1" altspace-cursor-collider="enabled: false" rotation="0 0 0" width="2.10" height="1.05">
+   </a-image>
+
+   <!--poster-->
+     
+   <a-image position="-2.30 2 -1.43" src="https://rawgit.com/Lia021/Sloan-talk-show/master/camilla%20dee.jpg" opacity="1" altspace-cursor-collider="enabled: false" rotation="0 0 0" width="0.80" height="1">
+   </a-image>
+
+    <!--bleacher-->
+     
+   <a-entity position="0 0 15" scale="18 18 18" rotation="0 90 0" collada-model="#bleacher"n-mesh-collider="type: environment; convex: false"></a-entity>
+ 
+   <!--inclser-->
+
+   <a-entity position="4 2 -1" rotation="0 -10 0" scale="3 3.62 3" n-layout-browser="url:  https://video-jukebox.firebaseapp.com/"></a-entity>
 
