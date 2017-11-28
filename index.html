@@ -117,7 +117,11 @@
 
  <a-sphere position="0 20 5"opacity="0.1"color="black" n-sphere-collider="type: environment; radius: 2"radius="2"></a-sphere>
 
- 
+ <!-- blocker -->
+
+ <a-box position="0 4.50 -12.30" opacity="0"color="black" depth="1" height="2" width="1"n-mesh-collider="type: environment; convex: false"></a-box>
+
+
   <!--poster-->
     
   <a-image position="2.30 2 1.43" src="https://rawgit.com/Lia021/Sloan-talk-show/master/camilla%20dee.jpg" opacity="1" altspace-cursor-collider="enabled: false" rotation="0 180 0" width="0.80" height="1">
@@ -130,34 +134,34 @@
 
  <!--treanbone-->
 
- <a-entity position="-1 4 -12">
+ <a-entity position="-0.20 4 -12">
   <a-entity id="pc-s" sync="own-on: s" sync-n-sound n-sound="on: s; src:https://rawgit.com/Lia021/Sloan-talk-show/master/soundeffects/Sad_Trombone_-_Sad_Trombone.ogg;"></a-entity>
   <a-entity id="gear-s" sync="own-on: s" sync-n-sound n-sound="on: s; src:https://rawgit.com/Lia021/Sloan-talk-show/master/soundeffects/Sad%20Trombone%20-%20Sad%20Trombone.mp3;"></a-entity>
-  <a-box wire="on: click; emit: s; targets: #pc-s, #gear-s;" color="yellow"depth="0.2" height="0.2" width="0.2"opacity="0.1" rotation="0 0 0"></a-box>
+  <a-box wire="on: click; emit: s; targets: #pc-s, #gear-s;" color="yellow"depth="0.1" height="0.1" width="0.1"opacity="0.1" rotation="0 0 0"></a-box>
  </a-entity>
 
  <!--please-->
 
- <a-entity position="-2 4 -12">
+ <a-entity position="-0.40 4 -12">
   <a-entity id="pc-p" sync="own-on: p" sync-n-sound n-sound="on: p; src:https://rawgit.com/Lia021/Sloan-talk-show/master/soundeffects/Please_-_Please_Sound_Effect.ogg;"></a-entity>
   <a-entity id="gear-p" sync="own-on: p" sync-n-sound n-sound="on: p; src:https://rawgit.com/Lia021/Sloan-talk-show/master/soundeffects/Please%20-%20Please%20Sound%20Effect.mp3;"></a-entity>
-  <a-box wire="on: click; emit: p; targets: #pc-p, #gear-p;" color="orange"depth="0.2" height="0.2" width="0.2"opacity="0.1"rotation="0 0 0"></a-box>
+  <a-box wire="on: click; emit: p; targets: #pc-p, #gear-p;" color="orange"depth="0.1" height="0.1" width="0.1"opacity="0.1"opacity="0.1"rotation="0 0 0"></a-box>
  </a-entity>
 
  <!--tudda-->
 
- <a-entity position="1 4 -12">
+ <a-entity position="0.20 4 -12">
   <a-entity id="pc-b" sync="own-on: b" sync-n-sound n-sound="on: b; src:https://rawgit.com/Lia021/Sloan-talk-show/master/soundeffects/TADAAH_-_TADAAH.ogg;"></a-entity>
   <a-entity id="gear-b" sync="own-on: b" sync-n-sound n-sound="on: b; src:https://rawgit.com/Lia021/Sloan-talk-show/master/soundeffects/TADAAH%20-%20TADAAH.mp3;"></a-entity>
-  <a-box wire="on: click; emit: b; targets: #pc-b, #gear-b;" color="black"depth="0.2" height="0.2" width="0.2"opacity="0.2" rotation="0 0 0"></a-box>
+  <a-box wire="on: click; emit: b; targets: #pc-b, #gear-b;" color="black"depth="0.1" height="0.1" width="0.1"opacity="0.1"opacity="0.2" rotation="0 0 0"></a-box>
  </a-entity>
 
- <!--xfiles-->
+ <!--ohyeah-->
 
  <a-entity position="0 4 -12">
   <a-entity id="pc-u" sync="own-on: u" sync-n-sound n-sound="on: u; src:https://rawgit.com/Lia021/Sloan-talk-show/master/soundeffects/Oh_-_Oh_Yeah_Sound_Effect_.ogg;"></a-entity>
   <a-entity id="gear-u" sync="own-on: u" sync-n-sound n-sound="on: u; src:https://rawgit.com/Lia021/Sloan-talk-show/master/soundeffects/Oh%20-%20Oh%20Yeah%20(Sound%20Effect).mp3;"></a-entity>
-  <a-box wire="on: click; emit: u; targets: #pc-u, #gear-u;" color="blue"depth="0.2" height="0.2" width="0.2"opacity="0.1"rotation="0 0 0"></a-box>
+  <a-box wire="on: click; emit: u; targets: #pc-u, #gear-u;" color="blue"depth="0.1" height="0.1" width="0.1"opacity="0.1"opacity="0.1"rotation="0 0 0"></a-box>
  </a-entity>
 
  <!--musicsloan-->
