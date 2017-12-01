@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width">
   <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
   <script src="https://sdk.altvr.com/libs/altspace.js/2.7.1/altspace.min.js"></script>
- 
   <script>
     altspace.getThreeJSTrackingSkeleton().then(function (skeleton) {
           window.head = skeleton.getJoint('Head');
@@ -133,11 +132,11 @@
 
  <!--sphere-->
 
- <a-sphere position="0 20 5"opacity="0.1"color="black" n-sphere-collider="type: environment; radius: 2"radius="2"></a-sphere>
+ <a-sphere position="0 20 5"opacity="0.2"color="black" n-sphere-collider="type: environment; radius: 2"radius="2"></a-sphere>
 
  <!-- blocker -->
 
- <a-box position="0 4.50 -12.30" opacity="0"color="black" depth="1" height="2" width="1"n-mesh-collider="type: environment; convex: false"></a-box>
+ <a-box position="0 4.50 -12.30" opacity="0"color="black" depth="1" height="2" width="1"></a-box>
 
 
   <!--poster-->
