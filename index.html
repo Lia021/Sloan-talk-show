@@ -33,8 +33,15 @@
     <a-asset-item id="mask" src="https://rawgit.com/Lia021/Sloan-talk-show/master/camilla%20mask/mask.dae"></a-asset-item>
     <a-asset-item id="board" src="https://cdn.rawgit.com/Lia021/model/0d1f715d/bell/bell.dae"></a-asset-item>
     
+	
 
-
+    <a-mixin id="mask" collada-model="#mask" collapse-model></a-mixin>
+    
+            <a-mixin id="parent-to-head" position="0 0.0` -0.13" scale="0.10 0.10 0.10" rotation="0 180 0" n-skeleton-parent="part:head;" sync sync-n-skeleton-parent></a-mixin>
+    
+     
+     
+ </a-assets>
 
 
    <!--trash-->
@@ -56,29 +63,17 @@
 
   <!--fire-->
 
-  <a-entity n-object='res: effects/fire'position="-0.50 1.40 0.30"></a-entity>
+  <a-entity n-object='res: effects/fire'position="-0.50 1.40 0"></a-entity>
 
   <!--fire2-->
 
- <a-entity n-object='res: effects/fire'position="0.05 1.40 0.30"></a-entity>
+ <a-entity n-object='res: effects/fire'position="0 1.40 0"></a-entity>
 
  <!--fire3-->
 
- <a-entity n-object='res: effects/fire'position="0.50 1.40 0.30"></a-entity>
+ <a-entity n-object='res: effects/fire'position="0.50 1.40 0"></a-entity>
 
- <!--fire4-->
 
- <a-entity n-object='res: effects/fire'position="0.50 1.40 -0.05"></a-entity>
-
- <!--fire5-->
- 
- <a-entity n-object='res: effects/fire'position="0.05 1.40 -0.05"></a-entity>
-
- <!--fire6-->
-
- <a-entity n-object='res: effects/fire'position="-0.50 1.40 -0.05"></a-entity>
-
- 
 
  <!--sphere-->
 
@@ -107,30 +102,8 @@
   <a-box wire="on: click; emit: s; targets: #pc-s, #gear-s;" color="yellow"depth="0.1" height="0.1" width="0.1"opacity="0.1" rotation="0 0 0"></a-box>
  </a-entity>
 
- <!--please-->
 
- <a-entity position="-0.40 4 -12">
-  <a-entity id="pc-p" sync="own-on: p" sync-n-sound n-sound="on: p; src:https://rawgit.com/Lia021/Sloan-talk-show/master/soundeffects/Please_-_Please_Sound_Effect.ogg;"></a-entity>
-  <a-entity id="gear-p" sync="own-on: p" sync-n-sound n-sound="on: p; src:https://rawgit.com/Lia021/Sloan-talk-show/master/soundeffects/Please%20-%20Please%20Sound%20Effect.mp3;"></a-entity>
-  <a-box wire="on: click; emit: p; targets: #pc-p, #gear-p;" color="orange"depth="0.1" height="0.1" width="0.1"opacity="0.1"opacity="0.1"rotation="0 0 0"></a-box>
- </a-entity>
-
- <!--tudda-->
-
- <a-entity position="0.20 4 -12">
-  <a-entity id="pc-b" sync="own-on: b" sync-n-sound n-sound="on: b; src:https://rawgit.com/Lia021/Sloan-talk-show/master/soundeffects/TADAAH_-_TADAAH.ogg;"></a-entity>
-  <a-entity id="gear-b" sync="own-on: b" sync-n-sound n-sound="on: b; src:https://rawgit.com/Lia021/Sloan-talk-show/master/soundeffects/TADAAH%20-%20TADAAH.mp3;"></a-entity>
-  <a-box wire="on: click; emit: b; targets: #pc-b, #gear-b;" color="black"depth="0.1" height="0.1" width="0.1"opacity="0.1"opacity="0.2" rotation="0 0 0"></a-box>
- </a-entity>
-
- <!--ohyeah-->
-
- <a-entity position="0 4 -12">
-  <a-entity id="pc-u" sync="own-on: u" sync-n-sound n-sound="on: u; src:https://rawgit.com/Lia021/Sloan-talk-show/master/soundeffects/Oh_-_Oh_Yeah_Sound_Effect_.ogg;"></a-entity>
-  <a-entity id="gear-u" sync="own-on: u" sync-n-sound n-sound="on: u; src:https://rawgit.com/Lia021/Sloan-talk-show/master/soundeffects/Oh%20-%20Oh%20Yeah%20(Sound%20Effect).mp3;"></a-entity>
-  <a-box wire="on: click; emit: u; targets: #pc-u, #gear-u;" color="blue"depth="0.1" height="0.1" width="0.1"opacity="0.1"opacity="0.1"rotation="0 0 0"></a-box>
- </a-entity>
-
+ 
  <!--musicsloan-->
 
  <a-entity position="0 1 1.70">
